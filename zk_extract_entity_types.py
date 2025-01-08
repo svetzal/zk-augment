@@ -25,7 +25,8 @@ zk = Zettelkasten(vault_root, chroma)
 
 types_extractor_agent = EntityTypesExtractorAgent.start(available_llms, zk)
 
-
+# Maybe this should be a specialized agent, a place to put all
+# type registry behaviours, except for the query methods
 class TypeRegistry:
     def __init__(self):
         self.types: dict[str, EntityType] = {}
