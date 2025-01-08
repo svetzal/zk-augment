@@ -1,0 +1,47 @@
+INPUT TEXT:
+Stacey Vetzal is a software developer and agile coach. She has been delivering
+software products for over 30 years, leading software teams for 25 years, and
+leading software development organizations for over 20 years. She has
+practically applied agile practices and concepts over 23 years. She is
+passionate about helping teams and organizations improve their processes and
+practices around software development, build better products, and get them to
+market faster.
+
+EXTRACTED ENTITIES AND ENTITY TYPES:
+- People
+  - Stacey Vetzal
+- Roles
+  - software developer
+  - agile coach
+- Skills
+  - delivering software products
+  - leading software teams
+  - leading software development organizations
+  - applying agile practices and concepts
+  - helping teams and organizations improve their processes and practices around software development
+  - building better software products
+  - getting software products to market faster
+- Activities
+  - working in the software industry
+  - agile practitioner
+- Time
+  - over 30 years
+  - over 23 years
+- Domain
+  - software industry
+- Interests
+  - helping teams and organizations improve their processes and practices
+  - build better products
+  - get them to market faster
+
+REAL INPUT TEXT:
+Mike is an experienced coach and trainer who helps teams, and their management, improve the way they deliver value. What makes Mike’s approach different is in the range of skills that he brings to your organization.
+
+➢ Human behaviour, psychology, and applied neuroscience, to improve how people work, both individually and in groups. This includes a focus on growing psychological safety.
+➢ Workflow design and implementation, to improve how the work flows through the system and how value is created. A focus on metrics, more data-informed decision making, and probabilistic forecasting to more accurately answer the question “when will we be done?”
+➢ Technical skills to improve how the value is actually implemented and maintained. Development, architecture, DevOps.
+➢ 25 years of experience with Agile methods to put it all together. Kanban, Scrum, Extreme Programming (XP)
+
+Mike is based in Canada and has travelled around the world, provide training classes, coaching and facilitation services to his clients. Today, preference is being given to coaching that can be done remotely and he works in your timezone, wherever you are located.
+
+EXTRACTED ENTITIES AND ENTITY TYPES:

@@ -2,4 +2,7 @@
 .idea
 __pycache__
 chroma
+*.pdf
+*.dot
+*.log
 

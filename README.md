@@ -1,46 +1,33 @@
-# Query your Zettelkasten
+# Information Architectural Extraction
 
-This is a simple implementation of Retrieval Augmented Generation (RAG) for your Zettelkasten. It breaks your markdown
-documents into chunks, and uses a cosine-distance query to place relevant text chunks from your Zettelkasten into an LLM
-chat context in order to answer your questions.
+Challenges:
+- when picking up on a partial entity reference, how to root around the context to find the full entity reference
+  - eg a reference to Mike, ultimately within that context meaning specifically Mike Bowler rather than Mike Kaufman
+  - eg a reference to Jan 8, ultimately within that context meaning specifically Jan 8, 2025
+  - eg a reference to Friday, ultimately within that context meaning specifically Jan 3, 2025
+    - pull in parsedatetime module to help with disambiguating time references
+  - most text snippets are highly contextual, meaning the interpretation changes according to their context
+  - this is the way in which GraphRAG is able to provide a more accurate interpretation of the text,
+    - making it possible to consider the context of the snippet by summarizing increasingly large bodies of related text
+  - Should we be assessing entity type framing in the context of the summaries rather than the individual snippets?
 
-It uses chromadb for a vector database (indexing the chunks, and doing distance queries for chunk selection) and ollama
-in order to generate the responses.
+- Considering the authoritativeness of knowledge
+  - do we trust a single person's statement? why do we trust one person's statement over another's?
+    - what about when they conflict?
+  - how do we detect conflict in knowledge statements?
+    - eg interpreting what is "good" or "bad" can be very different when considered in a Liberal or a Conservative context
 
-This project has many limitations, it is simply a starting point upon which I am building a larger system. Treat it like
-an example project, and build your own work on top of it.
+To Do
+- [ ] A way to incrementally index new or updated documents
+  - re-chunk updated documents, replace old chunks with new chunks
+  - drop the indexes for the old chunks and create new indexes for the new chunks
+  - update the graph with changes
+- [ ] A way to manage entity types as the dataset gets large
+  - treating them as a single flat list is outstretching the limits of the LLM context with my personal zk
+- [ ] Filesystem document store, build out the API
 
-## Limitations
-
-- no chat history
-- requires tweaking python code to run on your system
-- command-line only
-
-That said, it includes all of the critical elements for doing RAG queries across a document base.
-
-## Requirements
-
-You must have [ollama](https://ollama.com/) installed and functional.
-
-You must have a local knowledgebase / zettelkasten with content in markdown format. I
-use [Obsidian](https://obsidian.md/), because I favour working locally, and I favour using the markdown format for
-notes - because everything's local, and in plain text, I can simply point this tool at a Vault folder.
-
-## Workstation setup
-
-I recommend you setting up a local virtual Python environment, to keep it clean.
-
-```bash
-python3 -mvenv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-Adjust `settings.py` to point to your Zettelkasten directory, and the model you want to use in your ollama installation.
-Use `ollama list` to check which ones you have set up.
-
-Run `python zk_reindex.py` to re-index the contents of your zettelkasten.
-
-Run `python zk_query.py` to query your Zettelkasten. Note that this is not a true chat, it will not take into account
-the history of your queries, every query is answered as a stand-alone question. Press enter (blank line) to exit the
-query loop.
+Achieved
+- [x] Explore the LLMRegistry and how to reference OpenAI's models
+- How to make any or all of this agentic
+  - [x] a chat LLM can use tools for things like relative date resolution, but can't do structured output
+    - an instruct LLM can't use tools, but can do structured output

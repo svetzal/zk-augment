@@ -1,0 +1,63 @@
+{
+  "list": [
+    {
+      "label": "Entity Types",
+      "description": "Person",
+      "examples": [
+        "Mike"
+      ]
+    },
+    {
+      "label": "Entity Types",
+      "description": "Roles",
+      "examples": [
+        "coach and trainer"
+      ]
+    },
+    {
+      "label": "Entity Types",
+      "description": "Capabilities",
+      "examples": [
+        "helps teams, and their management, improve the way they deliver value",
+        "Human behaviour, psychology, and applied neuroscience, to improve how people work, both individually and in groups.",
+        "Workflow design and implementation, to improve how the work flows through the system and how value is created.",
+        "Technical skills to improve how the value is actually implemented and maintained. Development, architecture, DevOps.",
+        "25 years of experience with Agile methods"
+      ]
+    },
+    {
+      "label": "Entity Types",
+      "description": "Skills",
+      "examples": [
+        "growing psychological safety",
+        "metrics",
+        "data-informed decision making",
+        "probabilistic forecasting",
+        "Kanban",
+        "Scrum",
+        "Extreme Programming (XP)"
+      ]
+    },
+    {
+      "label": "Entity Types",
+      "description": "Locations",
+      "examples": [
+        "Canada"
+      ]
+    },
+    {
+      "label": "Entity Types",
+      "description": "Time",
+      "examples": []
+    },
+    {
+      "label": "Entity Types",
+      "description": "Services",
+      "examples": [
+        "training classes",
+        "coaching",
+        "facilitation services"
+      ]
+    }
+  ]
+}

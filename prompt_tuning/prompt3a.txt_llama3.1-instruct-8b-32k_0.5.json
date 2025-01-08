@@ -1,0 +1,45 @@
+{
+  "list": [
+    {
+      "label": "Capabilities",
+      "description": "Capabilities",
+      "examples": []
+    },
+    {
+      "label": "Event",
+      "description": "Event",
+      "examples": [
+        "met on Friday to discuss next steps",
+        "resigned as deputy prime minister and finance minister"
+      ]
+    },
+    {
+      "label": "Organization",
+      "description": "Organization",
+      "examples": []
+    },
+    {
+      "label": "Person",
+      "description": "Person",
+      "examples": [
+        "Trudeau",
+        "Chrystia Freeland"
+      ]
+    },
+    {
+      "label": "Political Party",
+      "description": "Political Party",
+      "examples": [
+        "Liberal"
+      ]
+    },
+    {
+      "label": "Time",
+      "description": "Time",
+      "examples": [
+        "weeks since Chrystia Freeland resigned",
+        "Friday"
+      ]
+    }
+  ]
+}

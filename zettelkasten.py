@@ -1,5 +1,7 @@
 import hashlib
 import os
+from datetime import datetime
+from time import strftime
 from typing import List
 
 import tiktoken
@@ -32,6 +34,14 @@ class Zettelkasten:
     def read_zk_document(self, full_path: str) -> ZkDocument:
         relative_path = os.path.relpath(full_path, self.root_path)
         (metadata, content) = load_markdown(full_path)
+
+        if "created_on" not in metadata:
+            epoch_time = os.path.getctime(full_path)
+            metadata["created_on"] = datetime.fromtimestamp(epoch_time).strftime("%Y-%m-%d")
+
+        if "author" not in metadata:
+            metadata["author"] = "Stacey Vetzal"
+
         document = ZkDocument(
             relative_path=relative_path,
             metadata=metadata,
@@ -65,6 +75,29 @@ class Zettelkasten:
                 results.append(ZkQueryResult(chunk=chunk, distance=distance))
         return results
 
+    def all_chunks(self) -> List[ZkDocumentChunk]:
+        response = self.document_db.get_all_items()
+        chunks = []
+        for i, document in enumerate(response['documents']):
+            chunk = ZkDocumentChunk(
+                id=response['ids'][i],
+                document_id=response['metadatas'][i]['id'],
+                document_title=response['metadatas'][i]['title'],
+                text=document
+            )
+            chunks.append(chunk)
+        return chunks
+
+    def find_chunk_by_id(self, chunk_id: str) -> ZkDocumentChunk:
+        response = self.document_db.get_item_by_id(chunk_id)
+        if len(response['documents']) > 0:
+            return ZkDocumentChunk(
+                id=response['ids'][0],
+                document_id=response['metadatas'][0]['id'],
+                document_title=response['metadatas'][0]['title'],
+                text=response['documents'][0]
+            )
+
     def _chunk_document(self, tokenizer, document, chunk_size=200, chunk_overlap=20):
         print(f"Processing {document.title}")
         tokens = tokenizer.encode(document.content)
@@ -78,7 +111,7 @@ class Zettelkasten:
 
             self._add_text_chunks_to_index(document, text_chunks)
 
-    def _add_text_chunks_to_index(self, document, text_chunks):
+    def _add_text_chunks_to_index(self, document: ZkDocument, text_chunks):
         self.document_db.add_items(
             ids=[hashlib.md5(bytes(hunk, "utf-8")).hexdigest() for hunk in text_chunks],
             documents=text_chunks,

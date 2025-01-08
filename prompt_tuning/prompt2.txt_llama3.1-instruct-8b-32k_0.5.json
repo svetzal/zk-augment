@@ -1,0 +1,71 @@
+{
+  "list": [
+    {
+      "label": "Entity Type",
+      "description": "People",
+      "examples": [
+        "Mike"
+      ]
+    },
+    {
+      "label": "Entity Type",
+      "description": "Roles",
+      "examples": [
+        "coach",
+        "trainer"
+      ]
+    },
+    {
+      "label": "Entity Type",
+      "description": "Skills",
+      "examples": [
+        "improve how people work, both individually and in groups",
+        "workflow design and implementation",
+        "metrics, more data-informed decision making, and probabilistic forecasting",
+        "technical skills to improve how the value is actually implemented and maintained (development, architecture, DevOps)",
+        "25 years of experience with Agile methods"
+      ]
+    },
+    {
+      "label": "Entity Type",
+      "description": "Activities",
+      "examples": [
+        "helps teams and their management improve the way they deliver value",
+        "provides training classes, coaching, and facilitation services"
+      ]
+    },
+    {
+      "label": "Entity Type",
+      "description": "Time",
+      "examples": [
+        "25 years of experience with Agile methods",
+        "has travelled around the world"
+      ]
+    },
+    {
+      "label": "Entity Type",
+      "description": "Domain",
+      "examples": [
+        "software industry",
+        "human behaviour, psychology, and applied neuroscience"
+      ]
+    },
+    {
+      "label": "Entity Type",
+      "description": "Interests",
+      "examples": [
+        "improve how people work, both individually and in groups",
+        "workflow design and implementation",
+        "technical skills to improve how the value is actually implemented and maintained",
+        "Agile methods"
+      ]
+    },
+    {
+      "label": "Entity Type",
+      "description": "Location",
+      "examples": [
+        "Canada"
+      ]
+    }
+  ]
+}

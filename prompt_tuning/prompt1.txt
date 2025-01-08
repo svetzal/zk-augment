@@ -1,0 +1,76 @@
+The goal is to study the connections and relations between the entity types and their features in order to understand all available information from the text.
+The user's goal is to
+        Identify the relations and structure of the community of interest, specifically within the agile software development domain.
+        .
+As part of the analysis, we are iteratively compiling a list of entity types across a larger dataset.
+The following tpes have already been identified:
+{"label":"organization","description":"A systematic arrangement or structure of people, processes, and resources that work together to achieve a common goal","examples":["HomeBrew"]}
+{"label":"person","description":"An individual human being with their own unique characteristics, thoughts, feelings, and experiences, possessing consciousness, identity, and autonomy","examples":["programmers"]}
+{"label":"domain","description":"A specific area of industry or software development domain","examples":["agile software development domain"]}
+{"label":"device","description":"A type of device or hardware used in programming","examples":["TL866II"]}
+{"label":"project","description":"An open-source project or community that develops and maintains software","examples":["HomeBrew"]}
+{"label":"investment strategy","description":"A plan or approach for allocating resources, such as money or time, to achieve specific financial or business goals","examples":["continuous delivery"]}
+{"label":"technology","description":"The application or use of scientific knowledge for practical purposes, especially in industry, such as machines, devices, or methods that make tasks easier, faster, or more efficient.","examples":[]}
+{"label":"leadership style","description":"A type of leadership style or approach used in management or organizational settings","examples":["servant leadership"]}
+{"label":"collaboration strategy","description":"The process of aligning goals and work together to accomplish things greater than what can be done individually","examples":["agile practices"]}
+{"label":"concept","description":"An abstract idea or notion that represents a thought, object, or phenomenon, often formed through mental perception, understanding, or imagination, and used to convey meaning, classify information, or explain complex ideas","examples":["phallus"]}
+{"label":"sector","description":"A specific area of industry","examples":["battery production"]}
+{"label":"school of thought","description":"A distinct philosophical, theoretical, or ideological perspective that represents a set of principles, beliefs, and values shared by a group of people, guiding their understanding, interpretation, and approach to a particular subject, issue, or discipline.","examples":["rationalism"]}
+{"label":"methodology","description":"A systematic approach to managing and organizing work, emphasizing continuous improvement and learning","examples":["agile software development"]}
+{"label":"physical characteristic","description":"An individual's physical appearance or characteristics that may influence their gender identity or presentation","examples":["height","facial hair"]}
+{"label":"gender presentation","description":"The way others perceive an individual's gender based on cultural norms, dress, behavior, etc.","examples":["dress","carry yourself"]}
+{"label":"identity","description":"A personal choice of how one presents themselves to the world","examples":[]}
+{"label":"life journey","description":"A systematic arrangement or structure of people, processes, and resources that work together to achieve a common goal","examples":["my life journey"]}
+{"label":"framework","description":"A framework or model used for sense-making, decision-making, or problem-solving, especially in complex situations","examples":["Cynefin sense-making framework"]}
+{"label":"non-technologist","description":"An approach or mindset towards technology, emphasizing ease and simplicity, often used to describe a non-technical person's relationship with technology","examples":[]}
+
+You are to add any new types in the input text that are not present in the identified types above.
+The entity types must be relevant to the user task.
+Avoid general entity types such as "other" or "unknown".
+This is VERY IMPORTANT: Do not generate redundant or overlapping entity types. For example, if the text contains "company" and "organization" entity types, you should return only one of them.
+Don't worry about quantity, always choose quality over quantity. And make sure EVERYTHING in your answer is relevant to the context of entity extraction.
+---
+EXAMPLE SECTION: The following section includes example output. These examples **must be excluded from your answer**.
+
+EXAMPLE 1
+Task: Determine the connections and organizational hierarchy within the specified community.
+Text: Example_Org_A is a company in Sweden. Example_Org_A's director is Example_Individual_B.
+JSON RESPONSE:
+{"list":[{"label":"organization","description":"A systematic arrangement or structure of people, processes, and resources that work together to achieve a common goal","examples":["Example_Org_A"]},{"label":"person","description":"An individual human being with their own unique characteristics, thoughts, feelings, and experiences, possessing consciousness, identity, and autonomy","examples":["Example_Individual_B"]}]}
+END OF EXAMPLE 1
+
+EXAMPLE 2
+Task: Identify the key concepts, principles, and arguments shared among different philosophical schools of thought, and trace the historical or ideological influences they have on each other.
+Text: Rationalism, epitomized by thinkers such as René Descartes, holds that reason is the primary source of knowledge. Key concepts within this school include the emphasis on the deductive method of reasoning.
+JSON RESPONSE:
+{"list":[{"label":"concept","description":"An abstract idea or notion that represents a thought, object, or phenomenon, often formed through mental perception, understanding, or imagination, and used to convey meaning, classify information, or explain complex ideas","examples":["deductive method of reasoning"]},{"label":"person","description":"An individual human being with their own unique characteristics, thoughts, feelings, and experiences, possessing consciousness, identity, and autonomy","examples":["René Descartes"]},{"label":"school of thought","description":"a distinct philosophical, theoretical, or ideological perspective that represents a set of principles, beliefs, and values shared by a group of people, guiding their understanding, interpretation, and approach to a particular subject, issue, or discipline.","examples":["rationalism"]}]}
+END OF EXAMPLE 2
+
+EXAMPLE 3
+Task: Identify the full range of basic forces, factors, and trends that would indirectly shape an issue.
+Text: Industry leaders such as Panasonic are vying for supremacy in the battery production sector. They are investing heavily in research and development and are exploring new technologies to gain a competitive edge.
+JSON RESPONSE:
+{"list":[{"label":"organization","description":"A systematic arrangement or structure of people, processes, and resources that work together to achieve a common goal","examples":["Panasonic"]},{"label":"technology","description":"The application or use of scientific knowledge for practical purposes, especially in industry, such as machines, devices, or methods that make tasks easier, faster, or more efficient.","examples":["battery"]},{"label":"sector","description":"A specific area of industry","examples":["battery production"]},{"label":"investment strategy","description":"a plan or approach for allocating resources, such as money or time, to achieve specific financial or business goals","examples":["research and development"]}]}
+END OF EXAMPLE 3
+END OF EXAMPLE SECTION
+---
+REAL DATA: The following section is the real data. You should use only this real data to prepare your answer. Add new EntityTypes that are not yet defined.
+Goal:
+        Identify the relations and structure of the community of interest, specifically within the agile software development domain.
+
+EXTRACT NEW ENTITY TYPES FROM THIS INPUT TEXT
+, like process, are highly visible to someone who is used to seeing and trusting them.
+
+As such, during transformation when all the surface appearances are correct, you might consider yourself having completed your adoption of agile, because you can now see the appropriate motions around you.
+
+But as someone who lived in the undercurrents, who put on motions to fool others when I was stealth, it's far too obvious to see the difference.
+
+Any good agilist will see the difference right away, and will chip away at the surface appearances to get at what's underneath.
+
+The most powerful question in your toolbox is "Why?"
+
+In an agile framework like Scrum, every motion exists for a purpose. Every agile event. Every role. And none of those "why's" are "because the framework says so, it was made by experts, and must be the right way to do things, because they know better than you."
+
+There's a school of thought that says "just make sure everyone goes through
+END OF INPUT TEXT
+JSON response:

@@ -1,0 +1,62 @@
+{
+  "list": [
+    {
+      "label": "Capabilities",
+      "description": "Capabilities",
+      "examples": [
+        "improve how people work",
+        "growing psychological safety",
+        "metrics, more data-informed decision making, and probabilistic forecasting",
+        "development, architecture, DevOps"
+      ]
+    },
+    {
+      "label": "Location",
+      "description": "Location",
+      "examples": [
+        "Canada"
+      ]
+    },
+    {
+      "label": "Methods",
+      "description": "Methods",
+      "examples": [
+        "Agile methods",
+        "Kanban",
+        "Scrum",
+        "Extreme Programming (XP)"
+      ]
+    },
+    {
+      "label": "Person",
+      "description": "Person",
+      "examples": [
+        "Mike"
+      ]
+    },
+    {
+      "label": "Roles",
+      "description": "Roles",
+      "examples": [
+        "coach",
+        "trainer"
+      ]
+    },
+    {
+      "label": "Skills",
+      "description": "Skills",
+      "examples": [
+        "human behaviour, psychology, and applied neuroscience",
+        "workflow design and implementation",
+        "technical skills"
+      ]
+    },
+    {
+      "label": "Time",
+      "description": "Time",
+      "examples": [
+        "25 years"
+      ]
+    }
+  ]
+}

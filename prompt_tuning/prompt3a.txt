@@ -1,0 +1,86 @@
+EXAMPLE INPUT TEXT 1:
+Stacey Vetzal is a software developer and agile coach.
+
+EXTRACTED ENTITIES AND ENTITY TYPES FROM EXAMPLE INPUT TEXT 1:
+- Person
+    - Stacey Vetzal
+- Roles
+    - software developer
+    - agile coach
+
+EXAMPLE INPUT TEXT 2:
+She has been delivering software products for over 30 years,
+leading software teams for 25 years, and leading software
+development organizations for over 20 years.
+
+EXTRACTED ENTITIES AND ENTITY TYPES FROM EXAMPLE INPUT TEXT 2:
+- Capabilities
+    - delivering software products
+    - leading software teams
+    - leading software development organizations
+- Time
+    - over 30 years
+    - over 25 years
+    - over 20 years
+
+EXAMPLE INPUT TEXT 3:
+She has practically applied agile practices and concepts over 23 years.
+
+EXTRACTED ENTITIES AND ENTITY TYPES FROM EXAMPLE INPUT TEXT 3:
+- Skills
+    - applying agile practices and concepts
+- Time
+    - over 23 years
+
+EXAMPLE INPUT TEXT 4:
+She is passionate about helping teams and organizations improve their processes and
+practices around software development, build better products, and get them to
+market faster.
+
+EXTRACTED ENTITIES AND ENTITY TYPES FROM EXAMPLE INPUT TEXT 4:
+- Capabilities
+    - helping teams and organizations improve their processes and practices
+    - build better products
+    - get them to market faster
+
+EXAMPLE INPUT TEXT 5:
+Liberal MPs will gather next week for a special national caucus meeting for the
+first time since Prime Minister Justin Trudeau told them he would take the
+holidays to reflect on calls for him to step down as party leader.
+
+EXTRACTED ENTITIES AND ENTITY TYPES FROM EXAMPLE INPUT TEXT 5:
+- Political Party
+    - Liberal
+- Person
+    - Justin Trudeau
+- Event
+    - special national caucus meeting
+    - holidays
+    - calls for him to step down as party leader
+
+EXAMPLE INPUT TEXT 6:
+Liberal national caucus chair Brenda Shanahan called the meeting for Wednesday,
+Jan. 8, according to an email sent to Liberal MPs and shared with CBC News on
+Friday. It is scheduled to run as long as six hours.
+
+EXTRACTED ENTITIES AND ENTITY TYPES FROM EXAMPLE INPUT TEXT 6:
+- Political Party
+    - Liberal
+- Person
+    - Brenda Shanahan
+- Organization
+    - CBC News
+- Event
+    - meeting
+- Date
+    - Wednesday, Jan. 8
+- Time
+    - as long as six hours
+
+REAL INPUT TEXT:
+The Liberal national caucus executive met on Friday to discuss next steps as
+Trudeau has continued to stay silent about his future in the weeks since
+Chrystia Freeland resigned as deputy prime minister and finance minister and as
+more MPs have called for him to resign.
+
+EXTRACTED ENTITIES AND ENTITY TYPES:

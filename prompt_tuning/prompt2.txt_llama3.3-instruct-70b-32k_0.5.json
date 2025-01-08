@@ -1,0 +1,16 @@
+{
+  "list": [
+    {
+      "label": "People",
+      "description": "",
+      "examples": []
+    },
+    {
+      "label": "Person",
+      "description": "",
+      "examples": [
+        "Mike"
+      ]
+    }
+  ]
+}

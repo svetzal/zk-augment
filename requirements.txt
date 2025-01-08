@@ -1,5 +1,12 @@
 ollama
+openai
 chromadb
 tiktoken
 pyyaml
 pytest
+rich
+rdflib
+structlog
+parsedatetime
+pydot
+pykka

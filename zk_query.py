@@ -1,7 +1,7 @@
 from chroma_gateway import ChromaGateway
-from llm_gateway import LLMGateway
+from llm.llm_gateway import LLMGateway
 from rag.query import rag_query
-from settings import vault_root, ollama_model
+from app.settings import vault_root, ollama_model
 from zettelkasten import Zettelkasten
 
 chroma = ChromaGateway()
